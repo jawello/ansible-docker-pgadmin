@@ -1,15 +1,15 @@
 - name: Start pgadmin container
   become: yes
-  become_method: sudo
   docker_container:
     name: pgadmin
-    image: fenglc/pgadmin4:latest
+    image: dpage/pgadmin4:latest
     state: started
-    restart_policy: always
-    links:
-      - "postgres:postgres"
+    restart_policy: "{{ pgadmin_restart_policy }}"
+#    links:
+#      - "postgres:postgres"
     published_ports:
-      - "5050:5050"
+      - "{{ pgadmin_port }}:{{ pgadmin_port }}"
     env:
-      DEFAULT_USER: admin
-      DEFAULT_PASSWORD: admin
+      PGADMIN_DEFAULT_EMAIL: "{{ default_user_email }}"
+      PGADMIN_DEFAULT_PASSWORD: "{{ default_user_password }}"
+      PGADMIN_LISTEN_PORT: "{{ pgadmin_port }}"

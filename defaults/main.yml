@@ -1,2 +1,6 @@
 ---
 # defaults file for ansible-docker-pgadmin
+pgadmin_restart_policy: always
+pgadmin_port: 5050
+default_user_email: admin@admin.com
+default_user_password: admin
