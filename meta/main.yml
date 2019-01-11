@@ -11,6 +11,4 @@ galaxy_info:
   galaxy_tags:
     - pgadmin4
 
-dependencies:
-  - tjcim.ansible-vagrant-box
-  - tjcim.ansible-docker
+dependencies: []
