@@ -8,6 +8,6 @@
     published_ports:
       - "{{ pgadmin_port }}:{{ pgadmin_port }}"
     env:
-      PGADMIN_DEFAULT_EMAIL: "{{ default_user_email }}"
-      PGADMIN_DEFAULT_PASSWORD: "{{ default_user_password }}"
+      PGADMIN_DEFAULT_EMAIL: "{{ pgadmin_default_user_email }}"
+      PGADMIN_DEFAULT_PASSWORD: "{{ pgadmin_default_user_password }}"
       PGADMIN_LISTEN_PORT: "{{ pgadmin_port }}"
