@@ -5,8 +5,6 @@
     image: dpage/pgadmin4:latest
     state: started
     restart_policy: "{{ pgadmin_restart_policy }}"
-#    links:
-#      - "postgres:postgres"
     published_ports:
       - "{{ pgadmin_port }}:{{ pgadmin_port }}"
     env:
